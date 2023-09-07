@@ -44,7 +44,7 @@
                     <section class="pt-10">
                         <h1 class="text-2xl font-normal text-black pb-5">Kitchenware</h1>
                         <div class="grid grid-cols-3 gap-5 pb-10">
-                            <div class="card col-span-1 bg-white shadow-xl rounded-md">
+                            <div id="k-accessory1" class="card col-span-1 bg-white shadow-xl rounded-md">
                                 <figure class="p-10 bg-slate-50 m-4">
                                     <img src="images/prod1.png" alt="" class="" />
                                 </figure>
@@ -57,11 +57,11 @@
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                     </div>
-                                    <h2 class="card-title text-black font-normal">K. Accessories</h2>
-                                    <p>39.00tk</p>
+                                    <h2 id="k-name-1" class="card-title text-black font-normal">Spoons</h2>
+                                    <p><span id="k-price-1">39.00</span>tk</p>
                                 </div>
                             </div>
-                            <div class="card col-span-1 bg-white shadow-xl rounded-md">
+                            <div id="k-accessory2"  class="card col-span-1 bg-white shadow-xl rounded-md">
                                 <figure class="p-10 bg-slate-50 m-4">
                                     <img src="images/prod2.png" alt="" class="" />
                                 </figure>
@@ -74,11 +74,11 @@
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                     </div>
-                                    <h2 class="card-title text-black font-normal">K. Accessories</h2>
-                                    <p>25.00tk</p>
+                                    <h2 id="k-name-2" class="card-title text-black font-normal">Chopping Boards</h2>
+                                    <p id="k-price-2"><span>29.00</span>tk</p>
                                 </div>
                             </div>
-                            <div class="card col-span-1 bg-white shadow-xl rounded-md">
+                            <div id="k-accessory3"  class="card col-span-1 bg-white shadow-xl rounded-md">
                                 <figure class="p-10 bg-slate-50 m-4">
                                     <img src="images/prod3.png" alt="" class="" />
                                 </figure>
@@ -91,8 +91,8 @@
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                     </div>
-                                    <h2 class="card-title text-black font-normal">Home Cooker</h2>
-                                    <p>49.00tk</p>
+                                    <h2 id="k-name-3" class="card-title text-black font-normal">Home Cooker</h2>
+                                    <p><span id="k-price-3">39.00</span>tk</p>
                                 </div>
                             </div>
                         </div>
@@ -229,11 +229,11 @@
                     </div>
                     <div class="card w-11/12  bg-white mt-5 rounded-md">
                         <div class="card-body">
-                            <p></p>
+                            <p id="cart-items"></p>
                             <hr>
-                            <p>Total price:</p>
-                            <p>Discount:</p>
-                            <p>Total:</p>
+                            <p>Total price: <span id="total-price">00</span>tk</p>
+                            <p>Discount: <span id="discount">00</span>tk</p>
+                            <p>Total: <span id="after-discount">00</span>tk</p>
                             <hr>
                             <div class="card-actions justify-end">
                                 <button class="rounded-lg bg-pink-500 p-1 pl-2 pr-2 text-white">Make Purchase</button>
@@ -242,9 +242,9 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </main>
+    <script src="script.js"></script>
 </body>
 
 </html>
