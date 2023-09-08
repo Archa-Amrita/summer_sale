@@ -27,36 +27,74 @@ const productCard3 = document.getElementById('k-accessory3').addEventListener('c
     addToCart(k3ProductName, k3ProductPrice);
     total(k3ProductPrice);
 })
+// Add to cart
 function addToCart(name, price) {
     const product = document.getElementById('cart-items');
     const count = product.childElementCount + 1;
     const p = document.createElement('p');
     p.innerHTML = count + '. ' + name + ' ' + price;
     product.appendChild(p);
+    purchaseEnable(price);
 }
 // Price before discount
 function priceTotal(price1) {
     const ptotal = document.getElementById('total-price');
     ptotal.innerText = price1;
 }
-// Discount
-function discout(price2) {
-    const ptotal = document.getElementById('discount');
-    const ptotaldisc = (price2 * 20) / 100;
-    ptotal.innerText = ptotaldisc;
-    return ptotaldisc;
-}
 // Discounted Price
 function finalPrice(price4) {
     const ptotal = document.getElementById('after-discount');
-    const disc = discout(price4);
-    const cal = price4 - disc;
-    ptotal.innerText = cal;
+    ptotal.innerText = price4;
 }
+// Total price
 var totalPrice = 0;
 function total(price) {
     totalPrice += price;
-    console.log(totalPrice);
+    if(totalPrice >= 200){
+        const cpnbtn = document.getElementById('coupon-btn');
+        cpnbtn.classList.remove('btn-disabled');
+        cpnbtn.classList.remove('bg-gray-200');
+        cpnbtn.classList.add('bg-pink-500');
+    }
     priceTotal(totalPrice);
     finalPrice(totalPrice);
+}
+function discountCalculation () {
+    const discountField = document.getElementById('coupon-text');
+    const discountFieldValue = discountField.value;
+    // Discounted final price
+    function finalPrice(price) {
+        const ptotal = document.getElementById('after-discount');
+        const disc = discount();
+        const cal = price - disc;
+        ptotal.innerText = cal;
+    }
+    //Discount price
+    function discount() {
+        const ptotal = document.getElementById('discount');
+        const ptotaldisc = (totalPrice * 20) / 100;
+        ptotal.innerText = ptotaldisc;
+        console.log(ptotaldisc);
+        return ptotaldisc;
+    }
+    if(discountFieldValue === 'SELL200'){
+        console.log(discountFieldValue);
+        const myDiscount = discount();
+        const myPayment = finalPrice(totalPrice);
+    }
+    else{
+        alert("Wrong code!!");
+    }
+}
+// Make Purchase button
+function purchaseEnable(price) {
+    if(price > 0){
+        const cpnbtn = document.getElementById('purchase-btn');
+        cpnbtn.classList.remove('btn-disabled');
+        cpnbtn.classList.remove('bg-gray-200');
+        cpnbtn.classList.add('bg-pink-500');
+    }
+}
+function purchase(){
+    
 }

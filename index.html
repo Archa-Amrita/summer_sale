@@ -58,7 +58,7 @@
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                     </div>
                                     <h2 id="k-name-1" class="card-title text-black font-normal">Spoons</h2>
-                                    <p><span id="k-price-1">39.00</span>tk</p>
+                                    <p><span id="k-price-1">50.00</span>tk</p>
                                 </div>
                             </div>
                             <div id="k-accessory2"  class="card col-span-1 bg-white shadow-xl rounded-md">
@@ -75,7 +75,7 @@
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                     </div>
                                     <h2 id="k-name-2" class="card-title text-black font-normal">Chopping Boards</h2>
-                                    <p id="k-price-2"><span>29.00</span>tk</p>
+                                    <p id="k-price-2"><span>80.00</span>tk</p>
                                 </div>
                             </div>
                             <div id="k-accessory3"  class="card col-span-1 bg-white shadow-xl rounded-md">
@@ -92,7 +92,7 @@
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                     </div>
                                     <h2 id="k-name-3" class="card-title text-black font-normal">Home Cooker</h2>
-                                    <p><span id="k-price-3">39.00</span>tk</p>
+                                    <p><span id="k-price-3">90.00</span>tk</p>
                                 </div>
                             </div>
                         </div>
@@ -218,11 +218,10 @@
                         <div class="card-body">
                             <h2 class="card-title text-black font-normal">Have coupon?</h2>
                             <div class="flex justify-center items-center">
-                                <input type="text"
+                                <input id="coupon-text" type="text"
                                     class="bg-white rounded-tl-lg rounded-bl-lg border-gray-100 border-x-2 border-t-2 border-b-2 h-8 ">
                                 <div class="card-actions justify-end">
-                                    <button
-                                        class="rounded-tr-lg rounded-br-lg bg-pink-500 p-1 pl-2 pr-2 text-white">Apply</button>
+                                    <button onclick="discountCalculation()" id="coupon-btn" class="rounded-tr-lg rounded-br-lg bg-gray-200 p-1 pl-2 pr-2 text-white btn-disabled">Apply</button>
                                 </div>
                             </div>
                         </div>
@@ -236,7 +235,7 @@
                             <p>Total: <span id="after-discount">00</span>tk</p>
                             <hr>
                             <div class="card-actions justify-end">
-                                <button class="rounded-lg bg-pink-500 p-1 pl-2 pr-2 text-white">Make Purchase</button>
+                                <button onclick="purchase()" id="purchase-btn" class="rounded-lg bg-gray-200 p-1 pl-2 pr-2 text-white w-full btn-disabled">Make Purchase</button>
                             </div>
                         </div>
                     </div>
