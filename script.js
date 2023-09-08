@@ -92,10 +92,17 @@ function purchaseEnable(price) {
         cpnbtn.classList.remove('bg-gray-200');
         cpnbtn.classList.add('bg-pink-500');
     }
+    else{
+        const cpnbtn = document.getElementById('purchase-btn');
+        cpnbtn.classList.remove('bg-pink-500');
+        cpnbtn.classList.add('btn-disabled');
+        cpnbtn.classList.add('bg-gray-200');
+    }
 }
 //reset all field
 function clean() {
     totalPrice = 0;
+    purchaseEnable(totalPrice);
     document.getElementById('cart-items').innerHTML = '';
     document.getElementById("total-price").innerText = '00';
     document.getElementById('discount').innerHTML = '00';
