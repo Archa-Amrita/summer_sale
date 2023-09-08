@@ -21,29 +21,30 @@
 <body class="bg-white">
     <!-- Banner section -->
     <header class=" bg-yellow-50">
-        <div class="container mx-auto flex justify-evenly items-center pt-10 pb-10">
+        <div class="container lg:mx-auto lg:flex lg:justify-evenly lg:items-center lg:flex-row-reverse pt-10 pb-10">
+            <img src="images/Summer 1.png" class="lg:max-w-md rounded-lg" />
             <div class="text-black">
                 <p class="text-center pb-4">---SALE FEVER---</p>
-                <h1 class="text-4xl pb-4">Purchase TK 200 or <br> above & get <span class="text-pink-500">20% off</span>
+                <h1 class="lg:text-4xl pb-4 text-center">Purchase TK 200 or <br> above & get <span class="text-pink-500">20% off</span>
                 </h1>
                 <div class="flex justify-center items-center gap-5 pb-4">
                     <p class="font-medium">Use Promo Code</p>
                     <button class="rounded-md bg-pink-500 p-1 pl-2 pr-2 text-white">SELL200</button>
                 </div>
             </div>
-            <img src="images/Summer 1.png" class="max-w-md rounded-lg" />
+            <!-- <img src="images/Summer 1.png" class="sm:hidden max-w-md rounded-lg lg:" /> -->
         </div>
     </header>
     <!-- Main section -->
     <main class="bg-gray-100">
         <div class="container mx-auto">
-            <div class="grid grid-cols-4 pt-10 gap-5">
+            <div class="grid lg:grid-cols-4 grid-cols-1 pt-10 gap-5">
                 <!-- Product section -->
-                <div class="col-span-3">
+                <div class="lg:col-span-3">
                     <!-- Kitchenware -->
                     <section class="pt-10">
-                        <h1 class="text-2xl font-normal text-black pb-5">Kitchenware</h1>
-                        <div class="grid grid-cols-3 gap-5 pb-10">
+                        <h1 class="text-2xl font-normal text-black pb-5 px-4 lg:px-0">Kitchenware</h1>
+                        <div class="grid lg:grid-cols-3 grid-cols-1 gap-5 pb-10 mx-4 my-4 lg:m-0">
                             <div id="k-accessory1" class="card col-span-1 bg-white shadow-xl rounded-md">
                                 <figure class="p-10 bg-slate-50 m-4">
                                     <img src="images/prod1.png" alt="" class="" />
@@ -61,7 +62,7 @@
                                     <p><span id="k-price-1">50.00</span>tk</p>
                                 </div>
                             </div>
-                            <div id="k-accessory2"  class="card col-span-1 bg-white shadow-xl rounded-md">
+                            <div id="k-accessory2" class="card col-span-1 bg-white shadow-xl rounded-md">
                                 <figure class="p-10 bg-slate-50 m-4">
                                     <img src="images/prod2.png" alt="" class="" />
                                 </figure>
@@ -78,7 +79,7 @@
                                     <p id="k-price-2"><span>80.00</span>tk</p>
                                 </div>
                             </div>
-                            <div id="k-accessory3"  class="card col-span-1 bg-white shadow-xl rounded-md">
+                            <div id="k-accessory3" class="card col-span-1 bg-white shadow-xl rounded-md">
                                 <figure class="p-10 bg-slate-50 m-4">
                                     <img src="images/prod3.png" alt="" class="" />
                                 </figure>
@@ -99,8 +100,8 @@
                     </section>
                     <!-- Sportswear -->
                     <section class="pt-10">
-                        <h1 class="text-2xl font-normal text-black pb-5">Sportswear</h1>
-                        <div class="grid grid-cols-3 gap-5 pb-10">
+                        <h1 class="text-2xl font-normal text-black pb-5 px-4 lg:px-0">Sportswear</h1>
+                        <div class="grid lg:grid-cols-3 grid-cols-1 gap-5 pb-10 mx-4 my-4 lg:m-0">
                             <div class="card col-span-1 bg-white shadow-xl rounded-md">
                                 <figure class="p-10 bg-slate-50 m-4">
                                     <img src="images/prod4.png" alt="" class="" />
@@ -213,20 +214,21 @@
                     </section> -->
                 </div>
                 <!-- Cart section -->
-                <div class="col-span-1 pt-24">
-                    <div class="card w-11/12  bg-white rounded-md">
+                <div class="lg:col-span-1 pt-24">
+                    <div class="card lg:w-11/12 mx-4 my-4 lg:m-0 bg-white rounded-md">
                         <div class="card-body">
                             <h2 class="card-title text-black font-normal">Have coupon?</h2>
                             <div class="flex justify-center items-center">
                                 <input id="coupon-text" type="text"
                                     class="bg-white rounded-tl-lg rounded-bl-lg border-gray-100 border-x-2 border-t-2 border-b-2 h-8 ">
                                 <div class="card-actions justify-end">
-                                    <button onclick="discountCalculation()" id="coupon-btn" class="rounded-tr-lg rounded-br-lg bg-gray-200 p-1 pl-2 pr-2 text-white btn-disabled">Apply</button>
+                                    <button onclick="discountCalculation()" id="coupon-btn"
+                                        class="rounded-tr-lg rounded-br-lg bg-gray-200 p-1 pl-2 pr-2 text-white btn-disabled">Apply</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="card w-11/12  bg-white mt-5 rounded-md">
+                    <div class="card lg:w-11/12 mx-4 my-4 lg:m-0 bg-white mt-5 rounded-md">
                         <div class="card-body">
                             <p id="cart-items"></p>
                             <hr>
@@ -235,13 +237,30 @@
                             <p>Total: <span id="after-discount">00</span>tk</p>
                             <hr>
                             <div class="card-actions justify-end">
-                                <button onclick="purchase()" id="purchase-btn" class="rounded-lg bg-gray-200 p-1 pl-2 pr-2 text-white w-full btn-disabled">Make Purchase</button>
+                                <button onclick="my_modal_1.showModal()" id="purchase-btn"
+                                    class="rounded-lg bg-gray-200 p-1 pl-2 pr-2 text-white w-full btn-disabled">Make
+                                    Purchase</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <dialog id="my_modal_1" class="modal bg-white">
+            <div class="modal-box bg-white items-center">
+                <div class="grid grid-cols-1 w-full justify-items-center ">
+                    <img src="images/congo.png" alt="">
+                    <h3 class="font-bold text-lg">Congratulations!</h3>
+                    <p class="py-4">Your Purchase the product</p>
+                </div>
+                <div class="modal-action justify-center">
+                    <form method="dialog">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button onclick="clean()" class="btn bg-pink-500 text-white border-none rounded-md">Go To Home</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
     </main>
     <script src="script.js"></script>
 </body>
