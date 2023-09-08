@@ -25,7 +25,8 @@
             <img src="images/Summer 1.png" class="lg:max-w-md rounded-lg" />
             <div class="text-black">
                 <p class="text-center pb-4">---SALE FEVER---</p>
-                <h1 class="lg:text-4xl pb-4 text-center">Purchase TK 200 or <br> above & get <span class="text-pink-500">20% off</span>
+                <h1 class="lg:text-4xl pb-4 text-center">Purchase TK 200 or <br> above & get <span
+                        class="text-pink-500">20% off</span>
                 </h1>
                 <div class="flex justify-center items-center gap-5 pb-4">
                     <p class="font-medium">Use Promo Code</p>
@@ -102,7 +103,7 @@
                     <section class="pt-10">
                         <h1 class="text-2xl font-normal text-black pb-5 px-4 lg:px-0">Sportswear</h1>
                         <div class="grid lg:grid-cols-3 grid-cols-1 gap-5 pb-10 mx-4 my-4 lg:m-0">
-                            <div class="card col-span-1 bg-white shadow-xl rounded-md">
+                            <div id="sport1" class="card col-span-1 bg-white shadow-xl rounded-md">
                                 <figure class="p-10 bg-slate-50 m-4">
                                     <img src="images/prod4.png" alt="" class="" />
                                 </figure>
@@ -115,11 +116,11 @@
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                     </div>
-                                    <h2 class="card-title text-black font-normal">Sports Back Cap</h2>
-                                    <p>59.00tk</p>
+                                    <h2 id="s-name-1" class="card-title text-black font-normal">Sports Back Cap</h2>
+                                    <p><span id="s-price-1">100.00</span>tk</p>
                                 </div>
                             </div>
-                            <div class="card col-span-1 bg-white shadow-xl rounded-md">
+                            <div id="sport2" class="card col-span-1 bg-white shadow-xl rounded-md">
                                 <figure class="p-10 bg-slate-50 m-4">
                                     <img src="images/prod5.png" alt="" class="" />
                                 </figure>
@@ -132,11 +133,12 @@
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                     </div>
-                                    <h2 class="card-title text-black font-normal">Full Jersey Set</h2>
-                                    <p>69.00tk</p>
+                                    <h2 id="s-name-2" class="card-title text-black font-normal">Full Jersey
+                                        Set</h2>
+                                    <p><span id="s-price-2">40.00</span>tk</p>
                                 </div>
                             </div>
-                            <div class="card col-span-1 bg-white shadow-xl rounded-md">
+                            <div id="sport3" class="card col-span-1 bg-white shadow-xl rounded-md">
                                 <figure class="p-10 bg-slate-50 m-4">
                                     <img src="images/prod6.png" alt="" class="" />
                                 </figure>
@@ -149,8 +151,9 @@
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                     </div>
-                                    <h2 class="card-title text-black font-normal">Sports cates</h2>
-                                    <p>79.00tk</p>
+                                    <h2 id="s-name-3" class="card-title text-black font-normal">
+                                        Sports cates</h2>
+                                    <p><span id="s-price-3">70.00</span>tk</p>
                                 </div>
                             </div>
                         </div>
@@ -256,7 +259,8 @@
                 <div class="modal-action justify-center">
                     <form method="dialog">
                         <!-- if there is a button in form, it will close the modal -->
-                        <button onclick="clean()" class="btn bg-pink-500 text-white border-none rounded-md">Go To Home</button>
+                        <button onclick="clean()" class="btn bg-pink-500 text-white border-none rounded-md">Go To
+                            Home</button>
                     </form>
                 </div>
             </div>

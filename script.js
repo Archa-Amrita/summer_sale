@@ -9,6 +9,7 @@ function getPrice(pprice) {
     const productPriceFloat = parseFloat(productPriceString);
     return productPriceFloat;
 }
+//Kichen products
 const productCard1 = document.getElementById('k-accessory1').addEventListener('click', function () {
     const k1ProductName = getName('k-name-1');
     const k1ProductPrice = getPrice('k-price-1');
@@ -26,6 +27,25 @@ const productCard3 = document.getElementById('k-accessory3').addEventListener('c
     const k3ProductPrice = getPrice('k-price-3');
     addToCart(k3ProductName, k3ProductPrice);
     total(k3ProductPrice);
+})
+//Sports Products
+const productCard4 = document.getElementById('sport1').addEventListener('click', function () {
+    const s1ProductName = getName('s-name-1');
+    const s1ProductPrice = getPrice('s-price-1');
+    addToCart(s1ProductName, s1ProductPrice);
+    total(s1ProductPrice);
+})
+const productCard5 = document.getElementById('sport2').addEventListener('click', function () {
+    const s2ProductName = getName('s-name-2');
+    const s2ProductPrice = getPrice('s-price-2');
+    addToCart(s2ProductName, s2ProductPrice);
+    total(s2ProductPrice);
+})
+const productCard6 = document.getElementById('sport3').addEventListener('click', function () {
+    const s3ProductName = getName('s-name-3');
+    const s3ProductPrice = getPrice('s-price-3');
+    addToCart(s3ProductName, s3ProductPrice);
+    total(s3ProductPrice);
 })
 // Add to cart
 function addToCart(name, price) {
